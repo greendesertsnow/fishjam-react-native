@@ -1,50 +1,25 @@
-# Welcome to your Expo app 👋
+# fishjam-react-native
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native application integrated with Fishjam for video calls and Gemini Live for AI interactions.
 
-## Get started
+## Audio Quality Note
+> [!IMPORTANT]
+> Audio may appear choppy when running in an iOS or Android simulator due to virtualized audio driver limitations and lack of hardware Acoustic Echo Cancellation (AEC).
+> This has been tested on a real Android device, where the audio is flowing smoothly and echo cancellation is functional.
 
-1. Install dependencies
+## Project Structure
+- `expo/`: The React Native Expo application.
+- `backend/`: Node.js Express server handling Fishjam room orchestration and Gemini Live integration.
 
-   ```bash
-   npm install
-   ```
+## Getting Started
+### Backend
+1. `cd backend`
+2. `npm install`
+3. Create `.env` from `.env.example`
+4. `npm run dev`
 
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Mobile App
+1. `cd expo`
+2. `npm install`
+3. Create `.env` from `.env.example`
+4. `npx expo run:ios` or `npx expo run:android`
